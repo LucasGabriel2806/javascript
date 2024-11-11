@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+
+        // window.document.write('Olá, Mundo!');
+        // window.document.write(window.document.charset); 
+        // window.document.write(window.navigator.appName); /** Navegador atual, a saída vai ser Netscape, pois o google está se comportando como um navegador Netscape. */
+        // window.document.write(window.document.URL);
+
+        var corpo = window.document.body;
+
+        var p1 = window.document.getElementsByTagName('p')[1];
+
+        // window.document.write('Está escrito assim: ' + p1.innerText);
+
+        corpo.style.background = 'black';
+
+        p1.style.color = 'blue';
+
+        // Se eu usar o innerText, não vai aparecer o efeito do strong, com innerHTML funciona.
+        document.write(p1.innerHTML);
+
+        // Se eu usar innerHTML no site, vai aparecer as tags <strong>, mas com innerText, esse erro não ocorre.
+        // window.alert(p1.innerHTML);
+
+        // O innerText pega o texto sem as filhas, sem a formatação, ele pega somente o texto. O innerHTML pega o HTML inteiro, inclusive com as tags filhas.
+
+        // var d = window.document.getElementById('msg');
+        // d.style.background = 'green';
+        // d.innerText = 'Estou aguardando...';
+
+        // var d = window.document.getElementByName('msg')[0];
+        // d.innertext = 'Olá!';
+
+        // var d = window.document.getElementsByClassName
+        
+        var d = window.document.querySelector('div#msg');
+        d.style.background = 'blue';
+
+
+    </script>
+    
+</body>
+</html>
